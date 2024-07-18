@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "assetDescription": { "type": "string" },
+                    "primaryClassificationId": { "type": "string" },
+                    "childrenCount": { "type": "integer" },
+                    "hierarchy": { "type": "integer" },
+                    "assetCode": { "type": "string" },
+                    "assetCategory": { "type": "string" },
+                    "isActive": { "type": "boolean" },
+                    "isInspected": { "type": "boolean" },
+                    "path": { "type": "array" },
+                    "parentCode": { "type": ["string", "null"] },
+                    "equivalencies": { "type": "array" },
+                    "childrenStatus": {
+                        "type": "object"
+                    },
+                    "_metadata": {
+                        "type": "object"
+                        },
+                  
+                    "_id": { "type": "string" }
+                },
+                "required": [
+                    "assetDescription", "primaryClassificationId", "childrenCount", "hierarchy",
+                    "assetCode", "assetCategory", "isActive", "isInspected", "path", "equivalencies",
+                    "childrenStatus", "_metadata", "_id"
+                ]
+            }
+        }}
+}
+
