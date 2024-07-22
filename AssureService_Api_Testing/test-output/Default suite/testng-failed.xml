@@ -5,8 +5,8 @@
     <classes>
       <class name="com.as.qa.test.AssetsOfInterest">
         <methods>
-          <include name="testGetAssureAssetsEndpoint"/>
           <include name="Setup"/>
+          <include name="testGetAssureAssetChildCountByPrimaryClassification"/>
         </methods>
       </class> <!-- com.as.qa.test.AssetsOfInterest -->
     </classes>

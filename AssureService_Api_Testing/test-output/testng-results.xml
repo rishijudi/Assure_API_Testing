@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="7" total="8" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-10T17:07:51Z" name="Default suite" finished-at="2024-07-10T17:07:56Z" duration-ms="5069">
+  <suite started-at="2024-07-19T05:44:00Z" name="Default suite" finished-at="2024-07-19T05:44:03Z" duration-ms="2996">
     <groups>
     </groups>
-    <test started-at="2024-07-10T17:07:51Z" name="Default test" finished-at="2024-07-10T17:07:56Z" duration-ms="5069">
+    <test started-at="2024-07-19T05:44:00Z" name="Default test" finished-at="2024-07-19T05:44:03Z" duration-ms="2996">
       <class name="com.as.qa.test.AssetsOfInterest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:com.as.qa.test.AssetsOfInterest@58ce9668]" started-at="2024-07-10T17:07:51Z" name="Setup" finished-at="2024-07-10T17:07:53Z" duration-ms="2311" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:com.as.qa.test.AssetsOfInterest@51fadaff]" started-at="2024-07-19T05:44:00Z" name="Setup" finished-at="2024-07-19T05:44:02Z" duration-ms="1837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="testGetAssureAssetsEndpoint()[pri:0, instance:com.as.qa.test.AssetsOfInterest@58ce9668]" started-at="2024-07-10T17:07:53Z" name="testGetAssureAssetsEndpoint" finished-at="2024-07-10T17:07:54Z" duration-ms="1110" status="FAIL">
+        <test-method signature="testGetAssureAssetChildCountByPrimaryClassification()[pri:1, instance:com.as.qa.test.AssetsOfInterest@51fadaff]" started-at="2024-07-19T05:44:02Z" name="testGetAssureAssetChildCountByPrimaryClassification" finished-at="2024-07-19T05:44:03Z" duration-ms="1141" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Response time is too slow expected [true] but found [false]]]>
+              <![CDATA[1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (integer) does not match any allowed primitive type (allowed: ["object"])
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/VasuSekar/git/Assure_API_Testing/AssureService_Api_Testing/target/test-classes/AssetsOfInterest_Json%5CGet_body%5Casset_count.json#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "type"
+    found: "integer"
+    expected: ["object"]
+
+  Actual: 0
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Response time is too slow expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at com.as.qa.test.AssetsOfInterest.testGetAssureAssetsEndpoint(AssetsOfInterest.java:42)
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (integer) does not match any allowed primitive type (allowed: ["object"])
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/VasuSekar/git/Assure_API_Testing/AssureService_Api_Testing/target/test-classes/AssetsOfInterest_Json%5CGet_body%5Casset_count.json#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "type"
+    found: "integer"
+    expected: ["object"]
+
+  Actual: 0
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:50)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+at com.as.qa.test.AssetsOfInterest.testGetAssureAssetChildCountByPrimaryClassification(AssetsOfInterest.java:83)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,15 +104,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetAssureAssetsEndpoint -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:com.as.qa.test.AssetsOfInterest@58ce9668]" started-at="2024-07-10T17:07:54Z" name="Setup" finished-at="2024-07-10T17:07:55Z" duration-ms="352" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="testPostAssureAssetCodesByEquivalencesAndPrimaryClassification()[pri:1, instance:com.as.qa.test.AssetsOfInterest@58ce9668]" started-at="2024-07-10T17:07:55Z" name="testPostAssureAssetCodesByEquivalencesAndPrimaryClassification" finished-at="2024-07-10T17:07:56Z" duration-ms="1271" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPostAssureAssetCodesByEquivalencesAndPrimaryClassification -->
+        </test-method> <!-- testGetAssureAssetChildCountByPrimaryClassification -->
       </class> <!-- com.as.qa.test.AssetsOfInterest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
